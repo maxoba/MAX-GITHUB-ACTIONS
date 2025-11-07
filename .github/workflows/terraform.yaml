@@ -13,6 +13,8 @@ jobs:
       - name: echo
         run: echo "Running terraform"
       - name: checkout
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4 
+      - name: install terraform
+        uses: hashicorp/setup-terraform@v3 
       - name: init
         run: terraform init            
