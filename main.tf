@@ -10,3 +10,10 @@ resource "aws_vpc" "test" {
   }
 }
 
+terraform {
+  backend "s3" {
+  bucket = "mybucketmaxoba"
+  key = "github-action/terraform.tfstate"
+  region = "us-west-2"
+}
+}
