@@ -14,5 +14,5 @@ jobs:
         run: echo "Running terraform"
       - name: checkout
         uses: actions/checkout@v4  
-      - name: check
-        run: ls              
+      - name: init
+        run: terraform init            
