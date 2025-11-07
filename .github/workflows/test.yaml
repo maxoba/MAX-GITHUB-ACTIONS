@@ -19,3 +19,11 @@ jobs:
           ls                     
           pwd
           node -v
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Directory
+        run:  Get-location
+      - name: Directory using bash
+        run: pwd
+        shell: bash                  
