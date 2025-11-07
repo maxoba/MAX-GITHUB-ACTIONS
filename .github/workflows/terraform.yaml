@@ -1,0 +1,16 @@
+name: terraform-build
+
+on:
+  push:
+    branches:
+      - main
+
+      
+jobs:
+  terraform:     
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo "Running terraform"
+      - name: check
+        run: ls              
