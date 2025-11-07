@@ -13,4 +13,9 @@ jobs:
       - name: echo
         run: echo "This is  Github actions"
       - name: second
-        run: echo "second step"                    
+        run: echo "second step" 
+      - name: multi-string
+        run: |
+          ls                     
+          pwd
+          node -v
