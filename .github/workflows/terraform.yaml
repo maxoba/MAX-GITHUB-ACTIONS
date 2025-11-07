@@ -25,6 +25,7 @@ jobs:
           terraform init
           terraform validate
           terraform fmt -recursive  
-          terraform plan  
+          terraform plan 
+          terraform apply -auto-approve 
 
        
