@@ -26,6 +26,6 @@ jobs:
           terraform validate
           terraform fmt -recursive  
           terraform plan 
-          terraform apply -auto-approve 
+          terraform destroy -auto-approve 
 
        
