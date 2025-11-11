@@ -23,7 +23,7 @@ jobs:
       - name: check
         run: terraform init
       - name:  validate
-        run:  terraform validate 
+        run:  terraform validatee 
       - name:  plan 
         run:  terraform plan
         if:  success() 
