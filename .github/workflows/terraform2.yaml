@@ -2,9 +2,13 @@ name: terraform-build
 
 on:
 
-  workflow_dispatch:
-
-
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main             
+      
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY }}                   
@@ -24,9 +28,9 @@ jobs:
         run:  terraform validate
       - name:  plan 
         run:  terraform plan
-        if:  github.event_name == 'workflow_dispatch'
+        if:  github.event_name == 'pull_request'
       - name: apply
         run: terraform apply -auto-approve
-        if:  github.event_name == 'push'  
+        if:  github.event_name == 'push' && github.ref == 'refs/heads/main'  
 
        
