@@ -14,8 +14,8 @@ jobs:
   terraform:     
     runs-on: ubuntu-latest
     steps:
-      - name: echo
-        run: echo "Running terraform"
+      - name: event
+        run: echo ${{ github.event_name }}
       - name: checkout
         uses: actions/checkout@v4 
       - name: install terraform
@@ -23,9 +23,9 @@ jobs:
       - name: check
         run: terraform init
       - name:  validate
-        run:  terraform validatee 
+        run:  terraform validate
       - name:  plan 
         run:  terraform plan
-        if:  success() 
+        if:  github.event_name == "pull_request"
 
        
