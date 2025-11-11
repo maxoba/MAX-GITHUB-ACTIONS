@@ -1,9 +1,8 @@
 name: terraform-build
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
 
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
