@@ -14,8 +14,6 @@ jobs:
   terraform:     
     runs-on: ubuntu-latest
     steps:
-      - name: event
-        run: echo ${{ github.event_name }}
       - name: checkout
         uses: actions/checkout@v4 
       - name: install terraform
