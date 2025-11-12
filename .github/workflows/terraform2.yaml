@@ -2,7 +2,7 @@ name: terraform-build
 
 on:
 
-  push:
+  push:       # or use workflow_dispatch manually
     branches:
       - main
   pull_request:
