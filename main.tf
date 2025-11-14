@@ -1,5 +1,5 @@
 provider "aws" {
- region = "us-west-2"
+ region = var.region
 }
 
 /*resource "aws_vpc" "test" {
@@ -18,3 +18,7 @@ terraform {
   region = "us-west-2"
 }
 }
+ variable "region"{
+  type = string
+  default = "us-west-2"
+ }
