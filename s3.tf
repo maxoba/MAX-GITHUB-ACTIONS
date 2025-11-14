@@ -18,4 +18,8 @@ resource "random_integer" "bucket_int" {
   min = 1
 }
 
+resource "aws_sqs_queue" "queue" {
+  name   = "s3-notification-queue"
+  policy = data.aws_iam_policy_document.queue.json
+}
 
