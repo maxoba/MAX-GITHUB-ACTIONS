@@ -2,7 +2,7 @@ provider "aws" {
  region = "us-west-2"
 }
 
-resource "aws_vpc" "test" {
+/*resource "aws_vpc" "test" {
   cidr_block = "10.0.0.0/24"
 
   tags = {
@@ -10,7 +10,7 @@ resource "aws_vpc" "test" {
     env = "prod"
   }
 }
-
+*/
 terraform {
   backend "s3" {
   bucket = "mybucketmaxoba"
