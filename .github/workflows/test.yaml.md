@@ -1,4 +1,4 @@
-name: test-workflows
+name: test-workflow
 on:
   #push:
     #branches:
