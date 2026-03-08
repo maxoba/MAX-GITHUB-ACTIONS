@@ -1,4 +1,4 @@
-name: test-workflow
+name: test-workflows
 on:
   #push:
     #branches:
@@ -17,7 +17,8 @@ jobs:
         run: echo "second step" 
       - name: multi-string
         run: |
-          ls -a                    
+          ls -a
+                    
           pwd
           node -v
   run-windows-commands:
