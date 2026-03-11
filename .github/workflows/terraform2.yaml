@@ -5,9 +5,9 @@ on:
   push:       # or use workflow_dispatch manually
     branches:
       - main
-  #pull_request:
-    #branches:
-     # - main             
+  pull_request:
+    branches:
+      - main             
       
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
