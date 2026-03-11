@@ -31,6 +31,6 @@ jobs:
         if:  github.event_name == 'pull_request'
       - name: apply
         run: terraform destroy -auto-approve
-        if:  github.event_name == 'push' && github.ref == 'refs/heads/main'  
+        if:  github.event_name == 'push' && github.ref == 'refs/head/main'  
 
        
