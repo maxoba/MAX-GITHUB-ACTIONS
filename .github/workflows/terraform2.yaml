@@ -28,9 +28,9 @@ jobs:
         run:  terraform validate
       - name:  plan 
         run:  terraform plan
-        if:  github.event_name == 'push'
+        if:  github.event_name == 'pull_request'
       - name: apply
         run: terraform destroy -auto-approve
-        if:  github.event_name == 'push' && github.ref == 'refs/head/main'  
+        if:  github.event_name == 'push' && github.ref == 'refs/heads/main'  
 
        

@@ -11,11 +11,11 @@ jobs:
       pull-requests: write    
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: checkouts
         uses: actions/checkout@v4
       - name: install modules
         run: npm install semantic-release @semantic-release/git @semantic-release/github -D 
       - name: Semantic release
         run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}                  
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}                  
